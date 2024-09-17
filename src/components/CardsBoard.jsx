@@ -1,11 +1,16 @@
 import Card from "./Card";
-import "./CardsBoard.css";
+import '../App.css';
 
-function CardsBoard({pokemonData}) {
+function CardsBoard({pokemonData, handleClick}) {
   return (
-    pokemonData.map((pokemon) => (
-      <Card key={pokemon.key} className="cards-board" data={pokemon}/>
-    ))
+    <div className="cards-board">
+    {pokemonData.map((pokemon) => (
+      <Card key={pokemon.key} 
+            data={pokemon}
+            handleClick={handleClick}
+      ></Card>
+    ))}
+    </div>
   );
 }
 

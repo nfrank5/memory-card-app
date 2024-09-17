@@ -1,16 +1,18 @@
-import { Fragment } from 'react';
+import '../App.css';
 
-function Card({data}) {
+function Card({data, handleClick}) {
+
+
   return (
-    <Fragment>
+    <div className="card" onClick={() => handleClick(data.key)} >
       <div>
-        {data && <h3>{data.pokemonName}</h3>}
+        {data && <h4>{data.pokemonName}</h4>}
       </div>
       <div>
-        {data && <img src={data.imageUrl} alt={data.pokemonName} />}
+        {data && <button><img src={data.imageUrl} alt={data.pokemonName} /></button>}
         {!data && <p>Loading...</p>}
       </div>
-    </Fragment>
+    </div>
   );
 }
 
