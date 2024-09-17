@@ -5,3 +5,5 @@ Here we go again with a new project! Let’s make sure you understand the concep
 How the game works
 
 https://www.theodinproject.com/lessons/react-new-memory-card
+
+Live: https://top-memory-card-game.netlify.app/
